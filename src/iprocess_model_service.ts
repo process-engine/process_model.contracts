@@ -3,12 +3,17 @@ import {IIdentity} from '@essential-projects/iam_contracts';
 import {Model, ProcessDefinitionFromRepository} from './types/index';
 
 /**
- * The service, which is used to access the ProcessDefinitionRepository, in order to retrieve or manipulate ProcessModel related data.
+ * The Service Layer of the ProcessModel API.
+ * Uses the ProcessModelRepository to query and manipulate stored
+ * ProcessDefinition.
+ *
+ * All retrieved ProcessDefinitions are returned in the internal Model-Format,
+ * as it is defined in the contracts.
  */
 export interface IProcessModelService {
 
   /**
-   * Writes a process definition to the database.
+   * Writes a ProcessDefinition to the database.
    *
    * @async
    * @param identity          Contains the requesting users identity.
@@ -39,21 +44,6 @@ export interface IProcessModelService {
    * @throws                404, if the ProcessModel was not found.
    */
   getProcessModelById(identity: IIdentity, processModelId: string): Promise<Model.Types.Process>;
-
-  /**
-   * Retrieves a ProcessModel by a ProcessInstanceID.
-   * The user will only be able to see FlowNodes and Lanes that he is allowed
-   * to access.
-   *
-   * @async
-   * @param  identity          Contains the requesting users identity.
-   * @param  processInstanceId The ProcessInstanceID of the ProcessModel to retrieve.
-   * @returns                  The retrieved ProcessModel.
-   * @throws                   403, if the User is forbidden to see the
-   *                           ProcessModel.
-   * @throws                   404, if the ProcessModel was not found.
-   */
-  getProcessModelByProcessInstanceId(identity: IIdentity, processInstanceId: string): Promise<Model.Types.Process>;
 
   /**
    * Retrieves a ProcessDefinition in its raw XML format.
