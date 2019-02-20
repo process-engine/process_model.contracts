@@ -11,26 +11,31 @@ export class FormField {
    * The UserTasks unique identifier.
    */
   public id: string;
+  
   /**
    * The UserTasks label.
    * This is the field that will be used to describe the FormField,
    * when the UserTask is reached during ProcessModel execution.
    */
   public label: string;
+  
   /**
    * The type of the FormField.
    * Can be virtually anything; string, boolean, number, or enum.
    */
   public type: string;
+  
   /**
    * The default value of the FormField.
    */
   public defaultValue: string;
+  
   /**
    * If the type of the FormField is set to 'enum',
    * this will contain all possible enum values.
    */
   public enumValues?: Array<EnumValue>;
+  
   /**
    * Determines the preferred type of control to use with the FormField.
    * For instance, when using string, this will most likely be 'TextBox', or

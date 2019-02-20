@@ -5,7 +5,7 @@ import {Task} from './task';
 /**
  * Describes a BPMN UserTask.
  *
- * A user task will hold the current ProcessExecution and wait for user input
+ * A user task will hold the current execution of the process and wait for user input
  * before continuing.
  */
 export class UserTask extends Task {

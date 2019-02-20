@@ -2,7 +2,7 @@ import {BpmnType} from '../../../constants';
 import {Task} from './task';
 
 /**
- * Describes a BPMN manual task.
+ * Describes a BPMN ManualTask.
  *
  * Currently not evaluated during runtime.
  */

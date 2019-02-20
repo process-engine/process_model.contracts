@@ -1,6 +1,6 @@
 /**
  * Encapsulates the ID of a process.
- * This field is used with participants, to associate the participant
+ * This field is used with Participants, to associate the Participant
  * with its ProcessModels.
  */
 export class ProcessReference {

@@ -6,7 +6,7 @@ import {ProcessDefinitionFromRepository} from './types/index';
 export interface IProcessDefinitionRepository {
 
   /**
-   * Writes a process definition to the database.
+   * Writes a ProcessDefinition to the database.
    *
    * @async
    * @param name              The name with which to persist the
@@ -23,7 +23,7 @@ export interface IProcessDefinitionRepository {
    * Gets a list of all stored ProcessDefinitions.
    *
    * @async
-   * @returns The retrieved Definitions.
+   * @returns The retrieved ProcessDefinitions.
    */
   getProcessDefinitions(): Promise<Array<ProcessDefinitionFromRepository>>;
 

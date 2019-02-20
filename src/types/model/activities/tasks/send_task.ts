@@ -8,7 +8,7 @@ import {Task} from './task';
  * A send task sends a user defined message to a ReceiveTask.
  *
  * In contrast to an Intermediate Message, a SendTask will block
- * the Process Execution, until a confirmation message from a
+ * the execution of the process, until a confirmation message from a
  * ReceiveTask was fetched.
  */
 export class SendTask extends Task {

@@ -9,7 +9,7 @@ import {
 } from '../event_definitions/index';
 
 /**
- * Describes a BPMN boundary event.
+ * Describes a BPMN BoundaryEvent.
  *
  * These events are always attached to an activity and will only live
  * as long as that activity gets executed.
@@ -60,6 +60,7 @@ export class BoundaryEvent extends Event {
    * cease all operations.
    */
   public cancelActivity: boolean;
+  
   /**
    * Contains the ID of the activity to which this event is attached.
    */
