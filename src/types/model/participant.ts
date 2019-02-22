@@ -1,7 +1,7 @@
 import {BaseElement} from './base/index';
 
 /**
- * Describes a BPMN Participant of a collaboration.
+ * Describes a BPMN Participant of a Collaboration.
  */
 export class Participant extends BaseElement {
   public name: string;
