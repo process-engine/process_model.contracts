@@ -1,4 +1,4 @@
-import {Definitions} from './model/definitions';
+import {Definitions} from './definitions';
 
 /**
  * Describes the BpmnModelParser, responsible for parsing XML processes into
