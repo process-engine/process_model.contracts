@@ -43,7 +43,7 @@ export interface IProcessModelService {
    *                        ProcessModel.
    * @throws                404, if the ProcessModel was not found.
    */
-  getProcessModelById(identity: IIdentity, processModelId: string): Promise<Model.Types.Process>;
+  getProcessModelById(identity: IIdentity, processModelId: string): Promise<Model.Process>;
 
   /**
    * Retrieves a ProcessDefinition in its raw XML format.
@@ -68,7 +68,7 @@ export interface IProcessModelService {
    * @returns                The retrieved ProcessModel.
    * @throws                 404, if the ProcessModel was not found.
    */
-  getByHash(identity: IIdentity, processModelId: string, hash: string): Promise<Model.Types.Process>;
+  getByHash(identity: IIdentity, processModelId: string, hash: string): Promise<Model.Process>;
 
   /**
    * Gets a list of all stored ProcessModels.
@@ -78,7 +78,7 @@ export interface IProcessModelService {
    * @returns        The retrieved ProcessModels.
    * @throws         403, if the User is forbidden to read any ProcessModels.
    */
-  getProcessModels(identity: IIdentity): Promise<Array<Model.Types.Process>>;
+  getProcessModels(identity: IIdentity): Promise<Array<Model.Process>>;
 
  /**
    * Deletes the ProcessDefinition with a specific ProcessModelId.
