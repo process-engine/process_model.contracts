@@ -6,7 +6,7 @@ import {
   MessageEventDefinition,
   SignalEventDefinition,
   TimerEventDefinition,
-} from '../event_definitions/index';
+} from './definitions/index';
 
 /**
  * Describes a BPMN BoundaryEvent.
@@ -60,7 +60,7 @@ export class BoundaryEvent extends Event {
    * cease all operations.
    */
   public cancelActivity: boolean;
-  
+
   /**
    * Contains the ID of the activity to which this event is attached.
    */
