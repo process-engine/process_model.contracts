@@ -3,6 +3,7 @@ import * as types from './types/index';
 
 export * from './activity';
 export * from './call_activity';
+export * from './empty_activity';
 export * from './manual_task';
 export * from './receive_task';
 export * from './script_task';

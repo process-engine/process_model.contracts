@@ -67,6 +67,8 @@ export enum EventElement {
  * Contains the tags for all known task types.
  */
 export enum TaskElement {
+  EmptyActivity = 'bpmn:task',
+
   CallActivity = 'bpmn:callActivity',
   SubProcess = 'bpmn:subProcess',
 
