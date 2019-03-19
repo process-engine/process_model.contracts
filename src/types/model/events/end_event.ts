@@ -57,7 +57,7 @@ export class EndEvent extends Event {
   public signalEventDefinition?: SignalEventDefinition;
   public terminateEventDefinition?: TerminateEventDefinition;
   /**
-   * When using a SignalEndEvent or MessageEndEvent, this property can hold a
+   * When sending messages or signals, this property can hold a
    * definition for a payload to send with the event.
    *
    * Use this, if you do not want to use the current ProcessToken as event
