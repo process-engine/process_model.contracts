@@ -53,4 +53,12 @@ export class IntermediateThrowEvent extends Event {
    * to throw.
    */
   public signalEventDefinition?: SignalEventDefinition;
+  /**
+   * When sending messages or signals, this property can hold a
+   * definition for a payload to send with the event.
+   *
+   * Use this, if you do not want to use the current ProcessToken as event
+   * payload.
+   */
+  public inputValues?: any;
 }
