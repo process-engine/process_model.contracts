@@ -8,5 +8,6 @@
  * to the model parser.
  */
 export interface IParsedObjectModel {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [property: string]: any;
 }

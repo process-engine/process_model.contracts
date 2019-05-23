@@ -19,17 +19,17 @@ export class IntermediateThrowEvent extends Event {
   }
 
   public get eventType(): EventType {
-    const eventIsMessageEvent: boolean = this.messageEventDefinition !== undefined;
+    const eventIsMessageEvent = this.messageEventDefinition !== undefined;
     if (eventIsMessageEvent) {
       return EventType.messageEvent;
     }
 
-    const eventIsSignalEvent: boolean = this.signalEventDefinition !== undefined;
+    const eventIsSignalEvent = this.signalEventDefinition !== undefined;
     if (eventIsSignalEvent) {
       return EventType.signalEvent;
     }
 
-    const eventIsLinkEvent: boolean = this.linkEventDefinition !== undefined;
+    const eventIsLinkEvent = this.linkEventDefinition !== undefined;
     if (eventIsLinkEvent) {
       return EventType.linkEvent;
     }
@@ -61,4 +61,5 @@ export class IntermediateThrowEvent extends Event {
    * payload.
    */
   public inputValues?: any;
+
 }

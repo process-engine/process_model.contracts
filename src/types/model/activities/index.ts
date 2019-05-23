@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as invocations from './invocations';
 import * as types from './types/index';
 
@@ -12,7 +13,6 @@ export * from './service_task';
 export * from './sub_process';
 export * from './user_task';
 
-// tslint:disable:no-namespace
 export namespace Invocations {
   export import Invocation = invocations.Invocation;
   export import MethodInvocation = invocations.MethodInvocation;
