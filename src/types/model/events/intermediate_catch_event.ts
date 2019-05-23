@@ -23,22 +23,22 @@ export class IntermediateCatchEvent extends Event {
   }
 
   public get eventType(): EventType {
-    const eventIsMessageEvent: boolean = this.messageEventDefinition !== undefined;
+    const eventIsMessageEvent = this.messageEventDefinition !== undefined;
     if (eventIsMessageEvent) {
       return EventType.messageEvent;
     }
 
-    const eventIsSignalEvent: boolean = this.signalEventDefinition !== undefined;
+    const eventIsSignalEvent = this.signalEventDefinition !== undefined;
     if (eventIsSignalEvent) {
       return EventType.signalEvent;
     }
 
-    const eventIsTimerEvent: boolean = this.timerEventDefinition !== undefined;
+    const eventIsTimerEvent = this.timerEventDefinition !== undefined;
     if (eventIsTimerEvent) {
       return EventType.timerEvent;
     }
 
-    const eventIsLinkEvent: boolean = this.linkEventDefinition !== undefined;
+    const eventIsLinkEvent = this.linkEventDefinition !== undefined;
     if (eventIsLinkEvent) {
       return EventType.linkEvent;
     }
@@ -69,4 +69,5 @@ export class IntermediateCatchEvent extends Event {
    * of the timer that is used to pause the execution.
    */
   public timerEventDefinition?: TimerEventDefinition;
+
 }
