@@ -13,6 +13,18 @@ import {Model, ProcessDefinitionFromRepository} from './types/index';
 export interface IProcessModelService {
 
   /**
+   * Gets a list of all stored ProcessModels.
+   *
+   * @async
+   * @param identity Contains the requesting users identity.
+   * @param offset   Optional: The number of records to skip.
+   * @param limit    Optional: The max. number of records to get.
+   * @returns        The retrieved ProcessModels.
+   * @throws         403, if the User is forbidden to read any ProcessModels.
+   */
+  getProcessModels(identity: IIdentity, offset?: number, limit?: number): Promise<Array<Model.Process>>;
+
+  /**
    * Writes a ProcessDefinition to the database.
    *
    * @async
@@ -69,16 +81,6 @@ export interface IProcessModelService {
    * @throws                 404, if the ProcessModel was not found.
    */
   getByHash(identity: IIdentity, processModelId: string, hash: string): Promise<Model.Process>;
-
-  /**
-   * Gets a list of all stored ProcessModels.
-   *
-   * @async
-   * @param identity Contains the requesting users identity.
-   * @returns        The retrieved ProcessModels.
-   * @throws         403, if the User is forbidden to read any ProcessModels.
-   */
-  getProcessModels(identity: IIdentity): Promise<Array<Model.Process>>;
 
   /**
    * Deletes the ProcessDefinition with a specific ProcessModelId.
