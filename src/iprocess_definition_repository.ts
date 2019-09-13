@@ -23,9 +23,11 @@ export interface IProcessDefinitionRepository {
    * Gets a list of all stored ProcessDefinitions.
    *
    * @async
-   * @returns The retrieved ProcessDefinitions.
+   * @param offset   Optional: The number of records to skip.
+   * @param limit    Optional: The max. number of records to get.
+   * @returns        The retrieved ProcessDefinitions.
    */
-  getProcessDefinitions(): Promise<Array<ProcessDefinitionFromRepository>>;
+  getProcessDefinitions(offset?: number, limit?: number): Promise<Array<ProcessDefinitionFromRepository>>;
 
   /**
    * Retrieves a ProcessDefinition by its name.

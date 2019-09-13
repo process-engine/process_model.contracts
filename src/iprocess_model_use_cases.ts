@@ -27,6 +27,18 @@ export interface IProcessModelUseCases {
   persistProcessDefinitions(identity: IIdentity, name: string, xml: string, overwriteExisting?: boolean): Promise<void>;
 
   /**
+   * Gets a list of all stored ProcessModels.
+   *
+   * @async
+   * @param identity Contains the requesting users identity.
+   * @param offset   Optional: The number of records to skip.
+   * @param limit    Optional: The max. number of records to get.
+   * @returns        The retrieved ProcessModels.
+   * @throws         403, if the User is forbidden to read any ProcessModels.
+   */
+  getProcessModels(identity: IIdentity, offset?: number, limit?: number): Promise<Array<Model.Process>>;
+
+  /**
    * Retrieves a ProcessModel by its ID.
    * The user will only be able to see FlowNodes and Lanes that he is allowed
    * to access.
@@ -80,16 +92,6 @@ export interface IProcessModelUseCases {
    * @throws                 404, if the ProcessModel was not found.
    */
   getByHash(identity: IIdentity, processModelId: string, hash: string): Promise<Model.Process>;
-
-  /**
-   * Gets a list of all stored ProcessModels.
-   *
-   * @async
-   * @param identity Contains the requesting users identity.
-   * @returns        The retrieved ProcessModels.
-   * @throws         403, if the User is forbidden to read any ProcessModels.
-   */
-  getProcessModels(identity: IIdentity): Promise<Array<Model.Process>>;
 
   /**
    * Removes all processModels, correlations, externalTasks, flowNodeInstances
