@@ -1,6 +1,6 @@
 {
   "name": "@process-engine/process_model.contracts",
-  "version": "2.7.0-beta.1",
+  "version": "2.7.0-beta.2",
   "description": "Contains the commonly used contracts for the ProcessModel API.",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
